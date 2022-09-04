@@ -38,7 +38,7 @@ class Autoencoder:
         self.model.compile(optimizer=optimizer,loss=loss)
 
     def train(self,x_train,batch_size,epochs):
-        self.model.fit(x_train, x_train, batch_size=batch_size, epochs=epochs, shuffle=True)
+        return self.model.fit(x_train, x_train, batch_size=batch_size, epochs=epochs, shuffle=True)
 
     def summary(self):
         self.encoder.summary()
