@@ -114,4 +114,4 @@ class Autoencoder:
     # processing
     def reconstruct(self, data):
         latent_space_repr = self.encoder.predict(data)
-        return self.decoder.predict(latent_space_repr)
+        return self.decoder.predict(latent_space_repr), latent_space_repr
